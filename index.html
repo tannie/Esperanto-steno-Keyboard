@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esperanto Steno Keyboard Layout (WSI)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 1400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .keyboard {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hand-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .hand-label {
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .key-row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .key {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .key:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .key-main {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .key-sub {
+            font-size: 11px;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        /* Color coding */
+        .left-consonant {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .vowel {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .right-consonant {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .special {
+            background: linear-gradient(135deg, #0f7e34 0%, #70f08c 100%);
+            color: white;
+        }
+
+        .vowel-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .legend {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        .mappings {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .mapping-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .mapping-section h3 {
+            margin-top: 0;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .mapping-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .mapping-list li {
+            padding: 5px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .mapping-key {
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Esperanto Steno Keyboard Layout</h1>
+        <p class="subtitle">Based on Lapwing Theory and WSI Layout</p>
+        <p class="subtitle" style="color: #e91e63; font-weight: bold;">⚠️ IMPORTANT: All proper nouns (names) MUST start with #</p>
+
+        <div class="keyboard">
+            <!-- Left Hand -->
+            <div class="hand-section">
+                <div class="hand-label">LEFT HAND (Initial Consonants)</div>
+                <div class="key-row">
+                    <div class="key special">
+                        <div class="key-main">#</div>
+                        <div class="key-sub">names</div>
+                    </div>
+
+                    <div class="key left-consonant">
+                        <div class="key-main">T</div>
+                        <div class="key-sub">t</div>
+                    </div>
+                    <div class="key left-consonant">
+                        <div class="key-main">P</div>
+                        <div class="key-sub">p</div>
+                    </div>
+                    <div class="key left-consonant">
+                        <div class="key-main">H</div>
+                        <div class="key-sub">h, ĥ*</div>
+                    </div>
+                    <div class="key special">
+                        <div class="key-main">*</div>
+                        <div class="key-sub">circumflex</div>
+                    </div>
+                </div>
+                <div class="key-row">
+                <div class="key left-consonant">
+                        <div class="key-main">S</div>
+                        <div class="key-sub">s, ŝ*</div>
+                    </div>
+                    <div class="key left-consonant">
+                        <div class="key-main">K</div>
+                        <div class="key-sub">k</div>
+                    </div>
+                    <div class="key left-consonant">
+                        <div class="key-main">W</div>
+                        <div class="key-sub">v</div>
+                    </div>
+                    <div class="key left-consonant">
+                        <div class="key-main">R</div>
+                        <div class="key-sub">r</div>
+                    </div>
+                    <div class="key special">
+                        <div class="key-main">*</div>
+                        <div class="key-sub">circumflex</div>
+                    </div>
+                </div>
+                <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
+                    Combinations: TP=f, TK=d, PW=b, PH=m, TPH=n, HR=l<br>
+                    TKP=g, TKP*=ĝ, TH=c, TH*=ĉ, SH=z, WH=j, WH*=ĵ
+                </div>
+            </div>
+
+            <!-- Vowels -->
+            <div class="hand-section vowel-section">
+                <div class="hand-label">VOWELS</div>
+                <div class="key-row">
+                    <div class="key vowel">
+                        <div class="key-main">A</div>
+                        <div class="key-sub">a</div>
+                    </div>
+                    <div class="key vowel">
+                        <div class="key-main">O</div>
+                        <div class="key-sub">o</div>
+                    </div>
+                    <div class="key vowel">
+                        <div class="key-main">E</div>
+                        <div class="key-sub">e</div>
+                    </div>
+                    <div class="key vowel">
+                        <div class="key-main">U</div>
+                        <div class="key-sub">u</div>
+                    </div>
+                </div>
+                <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
+                    AOE=i, EFB=ej, AFB=aj<br>
+                    OFB=oj, UFB=uj, AU=aŭ, EU=eŭ
+                </div>
+            </div>
+
+            <!-- Right Hand -->
+            <div class="hand-section">
+                <div class="hand-label">RIGHT HAND (Final Consonants)</div>
+                <div class="key-row">
+                    <div class="key right-consonant">
+                        <div class="key-main">F</div>
+                        <div class="key-sub">f</div>
+                    </div>
+                    <div class="key right-consonant">
+                        <div class="key-main">P</div>
+                        <div class="key-sub">p</div>
+                    </div>
+                    <div class="key right-consonant">
+                        <div class="key-main">L</div>
+                        <div class="key-sub">l</div>
+                    </div>
+                    <div class="key right-consonant">
+                        <div class="key-main">T</div>
+                        <div class="key-sub">t</div>
+                    </div>
+                    <div class="key right-consonant">
+                        <div class="key-main">D</div>
+                        <div class="key-sub">d</div>
+                    </div>
+                </div>
+                <div class="key-row">
+                    <div class="key right-consonant">
+                        <div class="key-main">R</div>
+                        <div class="key-sub">r</div>
+                    </div>
+                    <div class="key right-consonant">
+                        <div class="key-main">B</div>
+                        <div class="key-sub">b</div>
+                    </div>
+                    <div class="key right-consonant">
+                        <div class="key-main">G</div>
+                        <div class="key-sub">g, ĝ*</div>
+                    </div>
+                    <div class="key right-consonant">
+                        <div class="key-main">S</div>
+                        <div class="key-sub">s, ŝ*</div>
+                    </div>
+                    <div class="key right-consonant">
+                        <div class="key-main">Z</div>
+                        <div class="key-sub">z, affix marker</div>
+                    </div>
+                </div>
+                <div class="key-row">
+
+                </div>
+                <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
+                    FT = st, PB=n, BG=k, FP=v, PL=m, GS=h, TS=c, BL=bl<br>
+                    *G=ĝ, *GS=ĥ, *TS=ĉ, *S=ŝ, *FB=ĵ, BG = k, TS = c
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color left-consonant"></div>
+                <span>Left-Hand Consonants (Initial)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color vowel"></div>
+                <span>Vowels (Middle)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color right-consonant"></div>
+                <span>Right-Hand Consonants (Final)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color special"></div>
+                <span>Special Keys</span>
+            </div>
+        </div>
+
+        <div class="mappings">
+            <div class="mapping-section">
+                <h3>Key Combinations (Left)</h3>
+                <ul class="mapping-list">
+                    <li><span class="mapping-key">TP</span> = f</li>
+                    <li><span class="mapping-key">TK</span> = d</li>
+                    <li><span class="mapping-key">PW</span> = b</li>
+                    <li><span class="mapping-key">PH</span> = m</li>
+                    <li><span class="mapping-key">TPH</span> = n</li>
+                    <li><span class="mapping-key">HR</span> = l</li>
+                    <li><span class="mapping-key">TKP</span> = g</li>
+                    <li><span class="mapping-key">TH</span> = c</li>
+                    <li><span class="mapping-key">SH</span> = z</li>
+                    <li><span class="mapping-key">WH</span> = j</li>
+                </ul>
+            </div>
+
+            <div class="mapping-section">
+                <h3>Circumflexed Letters (*)</h3>
+                <ul class="mapping-list">
+                    <li><span class="mapping-key">S*</span> = ŝ (left)</li>
+                    <li><span class="mapping-key">TH*</span> = ĉ (left)</li>
+                    <li><span class="mapping-key">TKP*</span> = ĝ (left)</li>
+                    <li><span class="mapping-key">WH*</span> = ĵ (left)</li>
+                    <li><span class="mapping-key">H*</span> = ĥ (left)</li>
+                    <li><span class="mapping-key">-*G</span> = ĝ (right)</li>
+                    <li><span class="mapping-key">-*GS</span> = ĥ (right)</li>
+                    <li><span class="mapping-key">-*TS</span> = ĉ (right)</li>
+                    <li><span class="mapping-key">-*S</span> = ŝ (right)</li>
+                    <li><span class="mapping-key">-*FB</span> = ĵ (right)</li>
+                </ul>
+            </div>
+
+            <div class="mapping-section">
+                <h3>Diphthongs</h3>
+                <ul class="mapping-list">
+                    <li><span class="mapping-key">AOE</span> = i</li>
+                    <li><span class="mapping-key">EFB</span> = ej</li>
+                    <li><span class="mapping-key">AFB</span> = aj</li>
+                    <li><span class="mapping-key">OFB</span> = oj</li>
+                    <li><span class="mapping-key">UFB</span> = uj</li>
+                    <li><span class="mapping-key">AU</span> = aŭ</li>
+                    <li><span class="mapping-key">EU</span> = eŭ</li>
+                    <li><span class="mapping-key">OU</span> = ŭ</li>
+                </ul>
+            </div>
+
+            <div class="mapping-section">
+                <h3>Special Markers</h3>
+                <ul class="mapping-list">
+                    <li><span class="mapping-key">#</span> = proper nouns (REQUIRED)</li>
+                    <li><span class="mapping-key">KWR-</span> = grammatical endings</li>
+                    <li><span class="mapping-key">(corr. start key) + WHR- + ending</span> = correlatives</li>
+                    <li><span class="mapping-key">-Z</span> = affix marker (derivational)</li>
+                    <li><span class="mapping-key">KWRO</span> = {^o} noun ending</li>
+                    <li><span class="mapping-key">KWRA</span> = {^a} adj ending</li>
+                    <li><span class="mapping-key">KWRAS</span> = {^as} present</li>
+                    <li><span class="mapping-key">KWRAOE</span> = {^i} infinitive</li>
+                    <li style="margin-top: 10px; font-size: 11px;">
+                        All names must start with # (e.g., #PHAR/KAOE = Marko)
+                    </li>
+                    <li style="margin-top: 10px; font-size: 11px;">KWHREL = kiel (how/in what manner)<br/>
+                    WHROPB = ion<br />
+                    TWHRAPL = tiam
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mapping-section">
+                <h3>Right-Hand Clusters</h3>
+                <ul class="mapping-list">
+                    <li><span class="mapping-key">-FT</span> = st</li>
+                    <li><span class="mapping-key">-PL</span> = m</li>
+                    <li><span class="mapping-key">-PB</span> = n</li>
+                    <li><span class="mapping-key">-BG</span> = k</li>
+                    <li><span class="mapping-key">-FP</span> = v</li>
+                    <li><span class="mapping-key">-GS</span> = h</li>
+                    <li><span class="mapping-key">-TS</span> = c</li>
+                    <li><span class="mapping-key">-PBG</span> = ng</li>
+                    <li><span class="mapping-key">-PBTS</span> = nc</li>
+                </ul>
+            </div>
+
+            <div class="mapping-section">
+                <h3>Steno Order</h3>
+                <ul class="mapping-list">
+                    <li>Full: <span class="mapping-key">#STKPWHRAO*EUFRPBLGTSDZ</span></li>
+                    <li>Left: <span class="mapping-key">#STKPWHR*</span></li>
+                    <li>Vowels: <span class="mapping-key">AO EU</span></li>
+                    <li>Right: <span class="mapping-key">FRPBLGTSDZ</span></li>
+                    <li style="margin-top: 10px; font-size: 11px;">
+                        Note: Letters must follow this order within a stroke
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
