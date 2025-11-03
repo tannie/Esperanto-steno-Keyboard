@@ -191,6 +191,7 @@
     <div class="container">
         <h1>Esperanto Steno Keyboard Layout</h1>
         <p class="subtitle">Based on Lapwing Theory and WSI Layout</p>
+        <p class="subtitle" style="color: #4caf50; font-weight: bold;">✅ Updated: Session 10 (vowel swap, accusative shortcuts) & Session 11 (correlative reorganization)</p>
         <p class="subtitle" style="color: #e91e63; font-weight: bold;">⚠️ IMPORTANT: All proper nouns (names) MUST start with #</p>
 
         <div class="keyboard">
@@ -244,7 +245,8 @@
                 </div>
                 <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
                     Combinations: TP=f, TK=d, PW=b, PH=m, TPH=n, HR=l<br>
-                    TKP=g, TKP*=ĝ, TH=c, TH*=ĉ, SH=z, WH=j, WH*=ĵ
+                    TKP=g, TKP*=ĝ, TH=c, TH*=ĉ, SH=z, WH=j, WH*=ĵ<br>
+                    SKW=skv, SHR=sl, PWR=br
                 </div>
             </div>
 
@@ -266,11 +268,11 @@
                     </div>
                     <div class="key vowel">
                         <div class="key-main">U</div>
-                        <div class="key-sub">u</div>
+                        <div class="key-sub">i (optimized!)</div>
                     </div>
                 </div>
                 <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
-                    AOE=i, AOEU=ej, AEU=aj<br>
+                    U=i, OE=u, AEU=aj, AOEU=ej<br>
                     OEU=oj, AOU=uj, AU=aŭ, EU=eŭ
                 </div>
             </div>
@@ -326,12 +328,11 @@
 
                 </div>
                 <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
-                    <strong>Left-hand (initial):</strong> SKW=skv, SHR=sl<br>
-                    <strong>Right-hand (final):</strong><br>
+                    <strong>Common clusters:</strong><br>
                     2-key: FT=st, PB=n, BG=k, FP=v, FG=kv, LG=lg, PL=m, GS=h, TS=c<br>
                     3-key: FPL=sm, RPB=rn, PLG=lm, PLT=mp, PBG=ng, PBTS=nc, PBLG=nk<br>
                     4-key: RPBT=ntr (inverted), RPBL=mbr, FPLT=mpl (inverted), FPBT=nst<br>
-                    *G=ĝ, *GS=ĥ, *TS=ĉ, *S=ŝ, *FB=ĵ
+                    <strong>Circumflexed endings:</strong> *G=ĝ, *GS=ĥ, *TS=ĉ, *S=ŝ, *FB=ĵ
                 </div>
             </div>
         </div>
@@ -389,16 +390,21 @@
             </div>
 
             <div class="mapping-section">
-                <h3>Diphthongs</h3>
+                <h3>Vowels & Diphthongs</h3>
                 <ul class="mapping-list">
-                    <li><span class="mapping-key">AOE</span> = i</li>
+                    <li style="font-weight: bold; margin-bottom: 5px;">Basic Vowels (Session 10 optimization):</li>
+                    <li><span class="mapping-key">A</span> = a</li>
+                    <li><span class="mapping-key">E</span> = e</li>
+                    <li><span class="mapping-key">U</span> = i (OPTIMIZED - most frequent!)</li>
+                    <li><span class="mapping-key">O</span> = o</li>
+                    <li><span class="mapping-key">OE</span> = u</li>
+                    <li style="font-weight: bold; margin: 10px 0 5px 0;">Diphthongs:</li>
                     <li><span class="mapping-key">AEU</span> = aj (HIGH FREQ - plural adj)</li>
                     <li><span class="mapping-key">AOEU</span> = ej</li>
                     <li><span class="mapping-key">OEU</span> = oj (HIGH FREQ - plural noun)</li>
                     <li><span class="mapping-key">AOU</span> = uj</li>
                     <li><span class="mapping-key">AU</span> = aŭ</li>
                     <li><span class="mapping-key">EU</span> = eŭ</li>
-                    <li><span class="mapping-key">OU</span> = ŭ</li>
                 </ul>
             </div>
 
@@ -407,19 +413,21 @@
                 <ul class="mapping-list">
                     <li><span class="mapping-key">#</span> = proper nouns (REQUIRED)</li>
                     <li><span class="mapping-key">KPH-</span> = grammatical endings (inflection)</li>
-                    <li><span class="mapping-key">KWR-</span> = vowel-initial syllables + optional derivational suffixes</li>
-                    <li><span class="mapping-key">(corr. start key) + WHR- + ending</span> = correlatives</li>
+                    <li><span class="mapping-key">WHR-</span> = vowel-initial syllables + derivational suffixes (phonetic)</li>
+                    <li><span class="mapping-key">WR/KWR/TWR/WR*/TPWHR</span> = correlatives (grammatical)</li>
                     <li><span class="mapping-key">-Z</span> = affix marker (derivational)</li>
                     <li><span class="mapping-key">KPHO</span> = {^o} noun ending</li>
                     <li><span class="mapping-key">KPHA</span> = {^a} adj ending</li>
                     <li><span class="mapping-key">KPHAS</span> = {^as} present</li>
-                    <li><span class="mapping-key">KPHAOE</span> = {^i} infinitive</li>
+                    <li><span class="mapping-key">U</span> or <span class="mapping-key">I</span> = {^i} infinitive (short form)</li>
+                    <li><span class="mapping-key">O*</span> = {^on} accusative (Session 10!)</li>
+                    <li><span class="mapping-key">O*EU</span> = {^ojn} plural+acc (Session 10!)</li>
                     <li style="margin-top: 10px; font-size: 11px;">
-                        All names must start with # (e.g., #PHAR/KAOE = Marko)
+                        All names must start with # (e.g., #PHAR/KU = Marko)
                     </li>
-                    <li style="margin-top: 10px; font-size: 11px;">KWHREL = kiel (how/in what manner)<br/>
-                    WHROPB = ion<br />
-                    TWHRAPL = tiam
+                    <li style="margin-top: 10px; font-size: 11px;">KWREL = kiel (how/in what manner)<br/>
+                    WROPB = ion (something-ACC)<br />
+                    TWRAPL = tiam (then)
                     </li>
                 </ul>
             </div>
@@ -458,8 +466,12 @@
                     <li><span class="mapping-key">-FRT</span> = str</li>
                     <li><span class="mapping-key">-FRP</span> = rv</li>
                     <li><span class="mapping-key">-FRD</span> = rf</li>
-                    <li><span class="mapping-key">-FRB</span> = jr</li>
+                    <li><span class="mapping-key">-FBL</span> = lv (letter reinterpretation - pelv, salv, etc.)</li>
+                    <li><span class="mapping-key">-FLT</span> = lf (letter reinterpretation - golf, didelf)</li>
                     <li><span class="mapping-key">-RBS</span> = br (October)</li>
+                    <li style="margin-top: 10px; font-size: 11px; color: #666;">
+                        Note: -FRB freed in Session 10 (now uses FAEUR pattern with AEU vowel cluster)
+                    </li>
                 </ul>
             </div>
 
@@ -499,27 +511,28 @@
                     <li><span class="mapping-key">KPHO</span> = {^o} (noun)</li>
                     <li><span class="mapping-key">KPHA</span> = {^a} (adjective)</li>
                     <li><span class="mapping-key">KPHE</span> = {^e} (adverb)</li>
-                    <li><span class="mapping-key">KPHAOE</span> = {^i} (infinitive) | Short: <span class="mapping-key">I</span></li>
+                    <li><span class="mapping-key">KPHU</span> = {^i} (infinitive) | Short: <span class="mapping-key">U</span> or <span class="mapping-key">I</span></li>
                     <li><span class="mapping-key">KPHAS</span> = {^as} (present) | Short: <span class="mapping-key">AS</span></li>
-                    <li><span class="mapping-key">KPHAOES</span> = {^is} (past) | Short: <span class="mapping-key">IS</span></li>
+                    <li><span class="mapping-key">KPHUES</span> = {^is} (past) | Short: <span class="mapping-key">IS</span></li>
                     <li><span class="mapping-key">KPHOS</span> = {^os} (future) | Short: <span class="mapping-key">OS</span></li>
-                    <li><span class="mapping-key">KPHUS</span> = {^us} (conditional) | Short: <span class="mapping-key">US</span></li>
-                    <li><span class="mapping-key">KPHU</span> = {^u} (imperative) | Short: <span class="mapping-key">U</span></li>
+                    <li><span class="mapping-key">KPHOES</span> = {^us} (conditional) | Short: <span class="mapping-key">US</span></li>
+                    <li><span class="mapping-key">KPHOE</span> = {^u} (imperative) | Short: <span class="mapping-key">OE</span></li>
                     <li><span class="mapping-key">KPHAEU</span> = {^aj} (plural adj)</li>
                     <li><span class="mapping-key">KPHOEU</span> = {^oj} (plural noun)</li>
-                    <li><span class="mapping-key">KPHOPB</span> = {^on} (accusative)</li>
-                    <li><span class="mapping-key">KPHAEUPB</span> = {^ajn} (plural adj acc)</li>
-                    <li><span class="mapping-key">KPHOEUPB</span> = {^ojn} (plural noun acc)</li>
+                    <li><span class="mapping-key">KPHOPB</span> = {^on} (accusative) | Short: <span class="mapping-key">O*</span></li>
+                    <li><span class="mapping-key">KPHA*PB</span> = {^an} (adj accusative) | Short: <span class="mapping-key">A*</span></li>
+                    <li><span class="mapping-key">KPHA*EUPB</span> = {^ajn} (plural adj acc) | Short: <span class="mapping-key">A*EU</span></li>
+                    <li><span class="mapping-key">KPHO*EUPB</span> = {^ojn} (plural noun acc) | Short: <span class="mapping-key">O*EU</span></li>
                     <li><span class="mapping-key">KPHAPBT</span> = {^ant^} (active present participle)</li>
-                    <li><span class="mapping-key">KPHAOEPBT</span> = {^int^} (active past participle)</li>
+                    <li><span class="mapping-key">KPHUEPBT</span> = {^int^} (active past participle)</li>
                     <li><span class="mapping-key">KPHOPBT</span> = {^ont^} (active future participle)</li>
-                    <li><span class="mapping-key">KPHUPBT</span> = {^unt^} (active conditional - unofficial)</li>
+                    <li><span class="mapping-key">KPHOEPBT</span> = {^unt^} (active conditional - unofficial)</li>
                     <li><span class="mapping-key">KPHAT</span> = {^at^} (passive present participle)</li>
-                    <li><span class="mapping-key">KPHAOET</span> = {^it^} (passive past participle)</li>
+                    <li><span class="mapping-key">KPHUET</span> = {^it^} (passive past participle)</li>
                     <li><span class="mapping-key">KPHOT</span> = {^ot^} (passive future participle)</li>
-                    <li><span class="mapping-key">KPHUT</span> = {^ut^} (passive conditional - unofficial)</li>
+                    <li><span class="mapping-key">KPHOET</span> = {^ut^} (passive conditional - unofficial)</li>
                     <li style="margin-top: 10px; font-size: 11px; color: #666;">
-                        Short alternatives (I, AS, IS, OS, US, U) save keystrokes for common verbs
+                        Short alternatives save keystrokes! Session 10 adds O*/A*/O*EU/A*EU for accusative.
                     </li>
                 </ul>
             </div>
@@ -531,7 +544,7 @@
                         Note: Z is ONLY for derivational word-building, NEVER for grammatical inflection
                     </li>
                     <li style="margin-bottom: 10px; font-size: 11px; color: #667eea;">
-                        Vowel-initial suffixes also have KWR- alternatives (e.g., KWRAOEFT = {^ist^}, KWREG = {^eg^})
+                        Vowel-initial suffixes also have WHR- alternatives (e.g., WHRUFT = {^ist^}, WHREG = {^eg^})
                     </li>
                     <li><span class="mapping-key">A*TSDZ</span> = {^aĉ^} (pejorative)</li>
                     <li><span class="mapping-key">ADZ</span> = {^ad^} (continuous action)</li>
@@ -547,15 +560,15 @@
                     <li><span class="mapping-key">ERZ</span> = {^er^} (fragment)</li>
                     <li><span class="mapping-key">EFRDZ</span> = {^estr^} (leader)</li>
                     <li><span class="mapping-key">EZ</span> = {^et^} (diminutive)</li>
-                    <li><span class="mapping-key">AOEDZ</span> = {^id^} (offspring)</li>
-                    <li><span class="mapping-key">AOEGZ</span> = {^ig^} (make/cause)</li>
-                    <li><span class="mapping-key">AO*EGZ</span> = {^iĝ^} (become)</li>
-                    <li><span class="mapping-key">AOELZ</span> = {^il^} (tool)</li>
-                    <li><span class="mapping-key">AOEBZ</span> = {^in^} (feminine)</li>
-                    <li><span class="mapping-key">AOEPBDZ</span> = {^ind^} (worthy)</li>
-                    <li><span class="mapping-key">AOEPBGZ</span> = {^ing^} (holder)</li>
-                    <li><span class="mapping-key">AOEFPLZ</span> = {^ism^} (doctrine)</li>
-                    <li><span class="mapping-key">AOEFDZ</span> = {^ist^} (profession)</li>
+                    <li><span class="mapping-key">UDZ</span> = {^id^} (offspring)</li>
+                    <li><span class="mapping-key">UEGZ</span> = {^ig^} (make/cause)</li>
+                    <li><span class="mapping-key">U*EGZ</span> = {^iĝ^} (become)</li>
+                    <li><span class="mapping-key">ULZ</span> = {^il^} (tool)</li>
+                    <li><span class="mapping-key">UBZ</span> = {^in^} (feminine)</li>
+                    <li><span class="mapping-key">UEPBDZ</span> = {^ind^} (worthy)</li>
+                    <li><span class="mapping-key">UEPBGZ</span> = {^ing^} (holder)</li>
+                    <li><span class="mapping-key">UEFPLZ</span> = {^ism^} (doctrine)</li>
+                    <li><span class="mapping-key">UEFDZ</span> = {^ist^} (profession)</li>
                     <li><span class="mapping-key">OBLZ</span> = {^obl^} (multiple)</li>
                     <li><span class="mapping-key">OPBZ</span> = {^on^} (fraction)</li>
                     <li><span class="mapping-key">OPZ</span> = {^op^} (collective number)</li>
@@ -581,14 +594,17 @@
             </div>
 
             <div class="mapping-section">
-                <h3>Correlatives (Tabelvortoj)</h3>
+                <h3>Correlatives (Tabelvortoj) - Session 11 Update!</h3>
                 <ul class="mapping-list">
-                    <li style="font-weight: bold; margin-bottom: 10px;">Base patterns:</li>
-                    <li><span class="mapping-key">WHR-</span> = i- (indefinite: io, iu, ie, iel...)</li>
-                    <li><span class="mapping-key">KWHR-</span> = ki- (interrogative: kio, kiu, kie, kiel...)</li>
-                    <li><span class="mapping-key">TWHR-</span> = ti- (demonstrative: tio, tiu, tie, tiel...)</li>
-                    <li><span class="mapping-key">TWHR*-</span> = ĉi- (universal: ĉio, ĉiu, ĉie, ĉiel...)</li>
+                    <li style="font-weight: bold; margin-bottom: 10px;">Base patterns (WR system):</li>
+                    <li><span class="mapping-key">WR-</span> = i- (indefinite: io, iu, ie, iel...)</li>
+                    <li><span class="mapping-key">KWR-</span> = ki- (interrogative: kio, kiu, kie, kiel...)</li>
+                    <li><span class="mapping-key">TWR-</span> = ti- (demonstrative: tio, tiu, tie, tiel...)</li>
+                    <li><span class="mapping-key">WR*-</span> = ĉi- (universal - BRIEF: drops T, saves 2 keys!)</li>
                     <li><span class="mapping-key">TPWHR-</span> = neni- (negative: nenio, neniu, nenie, neniel...)</li>
+                    <li style="font-weight: bold; margin: 10px 0 5px 0;">Extended WR* brief for A/O vowels:</li>
+                    <li><span class="mapping-key">WRA*</span> = ĉia, WRA*L = ĉial, WRA*PB = ĉian, WRA*PL = ĉiam</li>
+                    <li><span class="mapping-key">WRO*</span> = ĉio, WRO*PB = ĉion, WRO*PL = ĉiom</li>
                     <li style="font-weight: bold; margin: 10px 0 5px 0;">Endings combine with bases:</li>
                     <li><span class="mapping-key">-O</span> = thing (io, kio, tio, ĉio, nenio)</li>
                     <li><span class="mapping-key">-U</span> = person (iu, kiu, tiu, ĉiu, neniu)</li>
@@ -600,7 +616,10 @@
                     <li><span class="mapping-key">-A</span> = quality (ia, kia, tia, ĉia, nenia)</li>
                     <li><span class="mapping-key">-ES</span> = possessive (ies, kies, ties, ĉies, nenies)</li>
                     <li style="margin-top: 10px; font-size: 11px; color: #666;">
-                        Example: KWHREL = kiel (how), TWHR*APL = ĉiam (always)
+                        Example: KWREL = kiel (how), WRA*PL = ĉiam (always - brief!), WRO* = ĉio (everything)
+                    </li>
+                    <li style="margin-top: 5px; font-size: 11px; color: #e91e63; font-weight: bold;">
+                        WR = correlatives (grammatical) | WHR = syllable linkers (phonetic)
                     </li>
                 </ul>
             </div>
