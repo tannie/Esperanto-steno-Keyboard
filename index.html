@@ -191,7 +191,7 @@
     <div class="container">
         <h1>Esperanto Steno Keyboard Layout</h1>
         <p class="subtitle">Based on Lapwing Theory and WSI Layout</p>
-        <p class="subtitle" style="color: #4caf50; font-weight: bold;">✅ Updated: Session 10 (vowel swap, accusative shortcuts) & Session 11 (correlative reorganization)</p>
+        <p class="subtitle" style="color: #4caf50; font-weight: bold;">✅ Updated: Session 10–12 (vowel swap, AB/OB accusative shortcuts, correlative reorganization, dictionary file split: conjunctions/particles, all affixes glue forward)</p>
         <p class="subtitle" style="color: #e91e63; font-weight: bold;">⚠️ IMPORTANT: All proper nouns (names) MUST start with #</p>
 
         <div class="keyboard">
@@ -272,8 +272,8 @@
                     </div>
                 </div>
                 <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
-                    U=i, OE=u, AEU=aj, AOEU=ej<br>
-                    OEU=oj, AOU=uj, AU=aŭ, EU=eŭ
+                    U=i, OE=u, AU=aj, EU=ej<br>
+                    OU=oj, OEU=uj, A*U=aŭ, *EU=eŭ
                 </div>
             </div>
 
@@ -412,12 +412,12 @@
                     <li><span class="mapping-key">O</span> = o</li>
                     <li><span class="mapping-key">OE</span> = u</li>
                     <li style="font-weight: bold; margin: 10px 0 5px 0;">Diphthongs:</li>
-                    <li><span class="mapping-key">AEU</span> = aj (HIGH FREQ - plural adj)</li>
-                    <li><span class="mapping-key">AOEU</span> = ej</li>
-                    <li><span class="mapping-key">OEU</span> = oj (HIGH FREQ - plural noun)</li>
-                    <li><span class="mapping-key">AOU</span> = uj</li>
-                    <li><span class="mapping-key">AU</span> = aŭ</li>
-                    <li><span class="mapping-key">EU</span> = eŭ</li>
+                    <li><span class="mapping-key">AU</span> = aj (HIGH FREQ - plural adj)</li>
+                    <li><span class="mapping-key">EU</span> = ej</li>
+                    <li><span class="mapping-key">OU</span> = oj (HIGH FREQ - plural noun)</li>
+                    <li><span class="mapping-key">OEU</span> = uj</li>
+                    <li><span class="mapping-key">A*U</span> = aŭ</li>
+                    <li><span class="mapping-key">*EU</span> = eŭ</li>
                 </ul>
             </div>
 
@@ -433,14 +433,25 @@
                     <li><span class="mapping-key">KPHA</span> = {^a} adj ending</li>
                     <li><span class="mapping-key">KPHAS</span> = {^as} present</li>
                     <li><span class="mapping-key">U</span> or <span class="mapping-key">I</span> = {^i} infinitive (short form)</li>
-                    <li><span class="mapping-key">O*</span> = {^on} accusative (Session 10!)</li>
-                    <li><span class="mapping-key">O*EU</span> = {^ojn} plural+acc (Session 10!)</li>
+                    <li><span class="mapping-key">OB</span> = "on" accusative (general nouns) | <span class="mapping-key">AB</span> = "an" (adjectives)</li>
+                    <li><span class="mapping-key">OUPB</span> = {^ojn} plural+acc</li>
+                    <li style="margin-top: 5px; font-size: 11px; color: #666;">
+                        Note: <span class="mapping-key">OPB</span>/<span class="mapping-key">APB</span> in correlatives still mean accusative (e.g. <span class="mapping-key">WROPB</span> = ion). These are single dictionary entries, not parsed compositionally.
+                    </li>
                     <li style="margin-top: 10px; font-size: 11px;">
                         All names must start with # (e.g., #PHAR/KU = Marko)
                     </li>
                     <li style="margin-top: 10px; font-size: 11px;">KWREL = kiel (how/in what manner)<br/>
                     WROPB = ion (something-ACC)<br />
                     TWRAPL = tiam (then)
+                    </li>
+
+                    <li style="font-weight: bold; margin-top: 15px;">Meta commands (word-boundary fix-ups):</li>
+                    <li><span class="mapping-key">-Z</span> = {*!} retroactive glue (delete preceding space)</li>
+                    <li><span class="mapping-key">SH</span> = {*?} retroactive split (insert preceding space)</li>
+                    <li><span class="mapping-key">S</span> = {^^} prospective glue point (prevents space)</li>
+                    <li style="margin-top: 5px; font-size: 11px; color: #666;">
+                        These bare strokes don't form valid Esperanto syllables, so they're free real estate for Plover/Javelin meta commands.
                     </li>
                 </ul>
             </div>
@@ -587,14 +598,18 @@
                     <li><span class="mapping-key">KPHOE</span> = {^u} (imperative) | short: <span class="mapping-key">OE</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Plural:</li>
-                    <li><span class="mapping-key">KPHAEU</span> = {^aj} (plural adjective) | short: <span class="mapping-key">AEU</span></li>
-                    <li><span class="mapping-key">KPHOEU</span> = {^oj} (plural noun) | short: <span class="mapping-key">OEU</span></li>
+                    <li><span class="mapping-key">KPHAU</span> = {^aj} (plural adjective) | short: <span class="mapping-key">AU</span></li>
+                    <li><span class="mapping-key">KPHOU</span> = {^oj} (plural noun) | short: <span class="mapping-key">OU</span></li>
 
-                    <li style="font-weight: bold; margin-top: 10px;">Accusative (Session 10 optimization!):</li>
-                    <li><span class="mapping-key">KPHOPB</span> = {^on} (singular acc) | short: <span class="mapping-key">O*</span> (2 keys!)</li>
-                    <li><span class="mapping-key">KPHA*PB</span> = {^an} (adj acc) | short: <span class="mapping-key">A*</span> (2 keys!)</li>
-                    <li><span class="mapping-key">KPHO*EUPB</span> = {^ojn} (plural+acc) | short: <span class="mapping-key">O*EU</span> (4 keys!)</li>
-                    <li><span class="mapping-key">KPHA*EUPB</span> = {^ajn} (plural adj+acc) | short: <span class="mapping-key">A*EU</span> (4 keys!)</li>
+                    <li style="font-weight: bold; margin-top: 10px;">Accusative (Session 12 — AB/OB pattern):</li>
+                    <li><span class="mapping-key">KPHOPB</span> = {^on} (singular acc) | short: <span class="mapping-key">OB</span> (plain "on", no glue — terminates word)</li>
+                    <li><span class="mapping-key">KPHAPB</span> = {^an} (adj acc) | short: <span class="mapping-key">AB</span> (plain "an", no glue — terminates word)</li>
+                    <li><span class="mapping-key">KPHOUPB</span> = {^ojn} (plural+acc) | short: <span class="mapping-key">OUPB</span></li>
+                    <li><span class="mapping-key">KPHAUPB</span> = {^ajn} (plural adj+acc) | short: <span class="mapping-key">AUPB</span></li>
+                    <li><span class="mapping-key">KPHOEUPB</span> = {^ujn} (plural uj+acc) | short: <span class="mapping-key">OEUPB</span></li>
+                    <li style="margin-top: 5px; font-size: 11px; color: #666;">
+                        Note: <span class="mapping-key">APB</span>/<span class="mapping-key">OPB</span> now reserved for the derivational <em>affixes</em> {an^}/{on^} (member, fraction). The short accusative forms use <span class="mapping-key">AB</span>/<span class="mapping-key">OB</span> instead — these output plain "an"/"on" and rely on the root's trailing ^ for backward glue, with no forward glue (so the word terminates).
+                    </li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Active Participles:</li>
                     <li><span class="mapping-key">KPHAPBT</span> = {^ant^} (present) | shorts: <span class="mapping-key">APBT, A*T</span></li>
@@ -612,7 +627,7 @@
                     <li><span class="mapping-key">TPH*</span> or <span class="mapping-key">*PB</span> = {^n} (accusative marker alone)</li>
 
                     <li style="margin-top: 10px; font-size: 11px; color: #e91e63; font-weight: bold;">
-                        Key optimization: O*/A* accusative shortcuts save 50%+ keystrokes! (Session 10)
+                        Key optimization: AB/OB accusative shortcuts save 50%+ keystrokes! (Session 12)
                     </li>
                 </ul>
             </div>
@@ -641,7 +656,7 @@
                     <li><span class="mapping-key">*UTS</span> or <span class="mapping-key">TH*</span> = {^iĉ^} (masculine)</li>
                     <li><span class="mapping-key">UFT</span> = {ist^} (profession) | brief: <span class="mapping-key">-FT</span></li>
                     <li><span class="mapping-key">UFPL</span> = {ism^} (doctrine) | brief: <span class="mapping-key">-S</span></li>
-                    <li><span class="mapping-key">APB</span> = {an^} (member) | brief: <span class="mapping-key">AB</span></li>
+                    <li><span class="mapping-key">APB</span> = {an^} (member) | both-side glue: <span class="mapping-key">APBZ</span> = {^an^}</li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Affectionate:</li>
                     <li><span class="mapping-key">TPH-FB</span> = {^nj^} (feminine affectionate) | brief: <span class="mapping-key">-FP</span></li>
@@ -649,7 +664,7 @@
                     <li><span class="mapping-key">TH*FB</span> = {^ĉj^} (masculine affectionate) | brief: <span class="mapping-key">TPR-TS</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Place & Collection:</li>
-                    <li><span class="mapping-key">AOEU</span> or <span class="mapping-key">WH</span> = {ej^} (place)</li>
+                    <li><span class="mapping-key">EU</span> or <span class="mapping-key">WH</span> = {ej^} (place)</li>
                     <li><span class="mapping-key">AR</span> = {ar^} (collection) | brief: <span class="mapping-key">R-</span></li>
                     <li><span class="mapping-key">UPBG</span> = {ing^} (holder) | brief: <span class="mapping-key">-PG</span></li>
 
@@ -675,9 +690,9 @@
                     <li><span class="mapping-key">*UG</span> = {iĝ^} (become) | brief: <span class="mapping-key">*-G</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Numbers:</li>
-                    <li><span class="mapping-key">OBL</span> = {obl^} (multiple) | brief: <span class="mapping-key">OB</span></li>
-                    <li><span class="mapping-key">OPB</span> = {on^} (fraction) | brief: <span class="mapping-key">-F</span></li>
-                    <li><span class="mapping-key">OP</span> = {op^} (collective) | brief: <span class="mapping-key">-P</span></li>
+                    <li><span class="mapping-key">OBL</span> = {obl^} (multiple) | both-side glue: <span class="mapping-key">OBZ</span> = {^obl^}</li>
+                    <li><span class="mapping-key">OPB</span> = {on^} (fraction) | both-side glue: <span class="mapping-key">-F</span> = {^on^}</li>
+                    <li><span class="mapping-key">OP</span> = {op^} (collective) | both-side glue: <span class="mapping-key">-P</span> = {^op^}</li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Other:</li>
                     <li><span class="mapping-key">OEPL</span> = {um^} (indefinite relation) | brief: <span class="mapping-key">-SZ</span></li>
