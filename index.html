@@ -245,7 +245,7 @@
                 </div>
                 <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">
                     Combinations: TP=f, TK=d, PW=b, PH=m, TPH=n, HR=l<br>
-                    TKP=g, TKP*=ĝ, TH=c, TH*=ĉ, SH=z, WH=j, WH*=ĵ<br>
+                    TKPW=g, TKPW*=ĝ, TH=c, TH*=ĉ, SH=z, WH=j, WH*=ĵ<br>
                     SKW=skv, SHR=sl, PWR=br
                 </div>
             </div>
@@ -375,7 +375,7 @@
                     <li><span class="mapping-key">KR</span> = kr (9), <span class="mapping-key">SP</span> = sp (7), <span class="mapping-key">KW</span> = kv (4)</li>
 
                     <li style="font-weight: bold; margin-top: 10px;">3-Key (Common):</li>
-                    <li><span class="mapping-key">TPH</span> = n (31 uses!), <span class="mapping-key">TKP</span> = g (15 uses)</li>
+                    <li><span class="mapping-key">TPH</span> = n (31 uses!), <span class="mapping-key">TKPW</span> = g (15 uses — Lapwing standard)</li>
                     <li><span class="mapping-key">PHR</span> = pl (19), <span class="mapping-key">TKR</span> = dr (18)</li>
                     <li><span class="mapping-key">TPR</span> = fr (10), <span class="mapping-key">PWR</span> = br (6), <span class="mapping-key">KHR</span> = kl (6)</li>
                     <li><span class="mapping-key">STR</span> = str (3), <span class="mapping-key">SPR</span> = spr (2)</li>
@@ -391,7 +391,8 @@
                 <ul class="mapping-list">
                     <li><span class="mapping-key">S*</span> = ŝ (left)</li>
                     <li><span class="mapping-key">TH*</span> = ĉ (left)</li>
-                    <li><span class="mapping-key">TKP*</span> = ĝ (left)</li>
+                    <li><span class="mapping-key">TKPW*</span> = ĝ (left)</li>
+                    <li><span class="mapping-key">TKPWH</span> = gv (left, only for gvid — `gh` slot reused since Esperanto has no gh)</li>
                     <li><span class="mapping-key">WH*</span> = ĵ (left)</li>
                     <li><span class="mapping-key">H*</span> = ĥ (left)</li>
                     <li><span class="mapping-key">-*G</span> = ĝ (right)</li>
@@ -411,13 +412,14 @@
                     <li><span class="mapping-key">U</span> = i (OPTIMIZED - most frequent!)</li>
                     <li><span class="mapping-key">O</span> = o</li>
                     <li><span class="mapping-key">OE</span> = u</li>
-                    <li style="font-weight: bold; margin: 10px 0 5px 0;">Diphthongs:</li>
+                    <li style="font-weight: bold; margin: 10px 0 5px 0;">Diphthongs (j-glide):</li>
                     <li><span class="mapping-key">AU</span> = aj (HIGH FREQ - plural adj)</li>
                     <li><span class="mapping-key">EU</span> = ej</li>
                     <li><span class="mapping-key">OU</span> = oj (HIGH FREQ - plural noun)</li>
                     <li><span class="mapping-key">OEU</span> = uj</li>
-                    <li><span class="mapping-key">A*U</span> = aŭ</li>
-                    <li><span class="mapping-key">*EU</span> = eŭ</li>
+                    <li style="font-weight: bold; margin: 10px 0 5px 0;">Semivowel ŭ (modified-letter):</li>
+                    <li><span class="mapping-key">A*U</span> = aŭ (* marks ŭ)</li>
+                    <li><span class="mapping-key">*EU</span> = eŭ (* marks ŭ)</li>
                 </ul>
             </div>
 
@@ -528,7 +530,7 @@
                     <li><span class="mapping-key">-PBZ</span> = n+affix marker (7 uses)</li>
 
                     <li style="margin-top: 10px; font-size: 11px; color: #e91e63;">
-                        Total: 39 used, 78 available | Note: -FRB freed (Session 9 - use FAEUR now)
+                        Total: 39 used, 78 available | Note: -FRB freed (Session 9 - use FAUR for fajr now)
                     </li>
                 </ul>
             </div>
@@ -540,19 +542,22 @@
                     <li><span class="mapping-key">-PBLG</span> = nk (9 uses - importante for Esperanto!)</li>
                     <li><span class="mapping-key">-RPBT</span> = ntr (9 uses - montri, centro, vintro)</li>
                     <li><span class="mapping-key">-FPBT</span> = nst (8 uses - konstru, instrui)</li>
-                    <li><span class="mapping-key">-PBGT</span> = nkt (5 uses - punkt, sankt)</li>
+                    <li><span class="mapping-key">-PBLGT</span> = nkt (2 uses - punkt, sankt; consistent extension of -PBLG=nk)</li>
                     <li><span class="mapping-key">-FPLT</span> = mpl (5 uses - ekzemplo, simpl)</li>
                     <li><span class="mapping-key">-BLGS</span> = kl (5 uses - bukl, kunikl, pekl, tikl)</li>
                     <li><span class="mapping-key">-PBTS</span> = nc (5 uses - c = ts)</li>
-                    <li><span class="mapping-key">-FBGT</span> = kst (4 uses - tekst, ekster - F=s Lapwing)</li>
+                    <li><span class="mapping-key">-BGTS</span> = kst (4 uses - tekst, ekster - letter inversion; replaces -FBGT)</li>
+                    <li><span class="mapping-key">-PLDZ</span> = lp (5+ uses - help, kulp, palp, talp, vulp - letter inversion)</li>
+                    <li><span class="mapping-key">-PLTD</span> = lpt (1 use - skulpt - letter inversion)</li>
+                    <li><span class="mapping-key">-RPBG</span> = ngr (fingr - letter inversion; extends -PBG=ng with R)</li>
 
                     <li style="margin-top: 10px; font-size: 11px; color: #666;">
                         Letter inversion: stroke order → output order different<br/>
-                        Examples: -RPBT (R-P-B-T) outputs n-t-r, -FPLT outputs m-p-l
+                        Examples: -RPBT (R-P-B-T) outputs n-t-r, -FPLT outputs m-p-l, -PLDZ outputs l-p, -RPBG outputs n-g-r
                     </li>
 
                     <li style="margin-top: 5px; font-size: 11px; color: #e91e63;">
-                        Total: 8 used (common clusters), 148 available
+                        Total: 20 used, 136 available
                     </li>
                 </ul>
             </div>
@@ -560,12 +565,12 @@
             <div class="mapping-section">
                 <h3>Right-Hand Clusters (5-key)</h3>
                 <ul class="mapping-list">
-                    <li><span class="mapping-key">-FRBGT</span> = kstr (3 uses - dekstr, ekstr, ekstrem)</li>
-                    <li><span class="mapping-key">-PBLGT</span> = complex (2 uses)</li>
+                    <li><span class="mapping-key">-RBGTS</span> = kstr (3 uses - dekstr, ekstr, ekstrem)</li>
+                    <li><span class="mapping-key">-RPBLG</span> = nkr (ankr - letter inversion; extends -PBLG=nk with R)</li>
 
                     <li style="margin-top: 10px; font-size: 11px; color: #666;">
                         Complex 5-key cluster using letter inversion<br/>
-                        Physical stroke: F-R-B-G-T → outputs: k-s-t-r
+                        Physical stroke: R-B-G-T-S → outputs: k-s-t-r (replaces -FRBGT)
                     </li>
 
                     <li style="margin-top: 5px; font-size: 11px; color: #e91e63;">
@@ -602,8 +607,8 @@
                     <li><span class="mapping-key">KPHOU</span> = {^oj} (plural noun) | short: <span class="mapping-key">OU</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Accusative (Session 12 — AB/OB pattern):</li>
-                    <li><span class="mapping-key">KPHOPB</span> = {^on} (singular acc) | short: <span class="mapping-key">OB</span> (plain "on", no glue — terminates word)</li>
-                    <li><span class="mapping-key">KPHAPB</span> = {^an} (adj acc) | short: <span class="mapping-key">AB</span> (plain "an", no glue — terminates word)</li>
+                    <li><span class="mapping-key">KPHOPB</span> = {^on} (singular noun acc) | short: <span class="mapping-key">OB</span> (plain "on", no glue — terminates word)</li>
+                    <li><span class="mapping-key">KPHAPB</span> = {^an} (singular adj acc) | short: <span class="mapping-key">AB</span> (plain "an", no glue — terminates word)</li>
                     <li><span class="mapping-key">KPHOUPB</span> = {^ojn} (plural+acc) | short: <span class="mapping-key">OUPB</span></li>
                     <li><span class="mapping-key">KPHAUPB</span> = {^ajn} (plural adj+acc) | short: <span class="mapping-key">AUPB</span></li>
                     <li><span class="mapping-key">KPHOEUPB</span> = {^ujn} (plural uj+acc) | short: <span class="mapping-key">OEUPB</span></li>
@@ -647,12 +652,12 @@
                     <li><span class="mapping-key">ET</span> = {et^} (diminutive) | brief: <span class="mapping-key">-T</span></li>
                     <li><span class="mapping-key">A*TS</span> = {aĉ^} (pejorative) | brief: <span class="mapping-key">*-TS</span></li>
                     <li><span class="mapping-key">A*FB</span> = {^aĵ^} (concrete thing) | brief: <span class="mapping-key">*-F</span></li>
-                    <li><span class="mapping-key">A*EUF</span> = {^uĵ^} (excellent quality) | brief: <span class="mapping-key">*-FB</span></li>
+                    <li><span class="mapping-key">O*EF</span> = {uĵ^} (excellent quality) | both-side: <span class="mapping-key">*-FB</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Person & Gender:</li>
                     <li><span class="mapping-key">OEL</span> = {ul^} (person characterized by) | brief: <span class="mapping-key">-LZ</span></li>
                     <li><span class="mapping-key">UPB</span> = {in^} (feminine) | brief: <span class="mapping-key">-B</span></li>
-                    <li><span class="mapping-key">UP</span> or <span class="mapping-key">*-P</span> = {ip^} (nonbinary)</li>
+                    <li><span class="mapping-key">UP</span> = {ip^} (nonbinary) | both-side: <span class="mapping-key">-PZ</span></li>
                     <li><span class="mapping-key">*UTS</span> or <span class="mapping-key">TH*</span> = {^iĉ^} (masculine)</li>
                     <li><span class="mapping-key">UFT</span> = {ist^} (profession) | brief: <span class="mapping-key">-FT</span></li>
                     <li><span class="mapping-key">UFPL</span> = {ism^} (doctrine) | brief: <span class="mapping-key">-S</span></li>
@@ -664,18 +669,18 @@
                     <li><span class="mapping-key">TH*FB</span> = {^ĉj^} (masculine affectionate) | brief: <span class="mapping-key">TPR-TS</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Place & Collection:</li>
-                    <li><span class="mapping-key">EU</span> or <span class="mapping-key">WH</span> = {ej^} (place)</li>
-                    <li><span class="mapping-key">AR</span> = {ar^} (collection) | brief: <span class="mapping-key">R-</span></li>
+                    <li><span class="mapping-key">WH</span> = {ej^} (place, forward-glue) | both-side: <span class="mapping-key">EU</span> | terminating: <span class="mapping-key">EFP</span></li>
+                    <li><span class="mapping-key">AR</span> = {ar^} (collection) | both-side glue: <span class="mapping-key">-R</span></li>
                     <li><span class="mapping-key">UPBG</span> = {ing^} (holder) | brief: <span class="mapping-key">-PG</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Things & Tools:</li>
                     <li><span class="mapping-key">UL</span> = {il^} (tool) | brief: <span class="mapping-key">-L</span></li>
                     <li><span class="mapping-key">UD</span> = {id^} (offspring) | brief: <span class="mapping-key">-DZ</span></li>
-                    <li><span class="mapping-key">AOE</span> = {^uj} (container/country) | brief: <span class="mapping-key">-FB</span></li>
+                    <li><span class="mapping-key">AOE</span> = {uj^} (container/country) | both-side: <span class="mapping-key">-FB</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Abstract & Quality:</li>
                     <li><span class="mapping-key">ETS</span> = {ec^} (abstract quality) | brief: <span class="mapping-key">-TS</span></li>
-                    <li><span class="mapping-key">ER</span> = {er^} (single unit) | brief: <span class="mapping-key">-R</span></li>
+                    <li><span class="mapping-key">ER</span> = {er^} (single unit) — no both-side-glue variant currently</li>
                     <li><span class="mapping-key">EFRT</span> = {estr^} (leader) | brief: <span class="mapping-key">-FR</span></li>
 
                     <li style="font-weight: bold; margin-top: 10px;">Possibility & Tendency:</li>
@@ -706,8 +711,8 @@
                         Attach to following root: {prefix^} + root + ending
                     </li>
                     <li><span class="mapping-key">PH</span> or <span class="mapping-key">PHAL</span> = {mal^} (opposite - very common!)</li>
-                    <li><span class="mapping-key">RE</span> = {re^} (again/back)</li>
-                    <li><span class="mapping-key">TKP</span> or <span class="mapping-key">TKPE</span> = {ge^} (both sexes together)</li>
+                    <li><span class="mapping-key">RE</span> or <span class="mapping-key">R-</span> = {re^} (again/back)</li>
+                    <li><span class="mapping-key">TKPW</span> or <span class="mapping-key">TKPWE</span> = {ge^} (both sexes together)</li>
                     <li><span class="mapping-key">PW</span> or <span class="mapping-key">PWO</span> = {bo^} (in-law relationship)</li>
                     <li><span class="mapping-key">T-</span> or <span class="mapping-key">TKUS</span> = {dis^} (separation/apart)</li>
                     <li><span class="mapping-key">EBG</span> = {ek^} (sudden action/start)</li>
@@ -757,18 +762,19 @@
                 <ul class="mapping-list">
                     <li style="font-weight: bold; margin-bottom: 10px;">Possessive Adjectives: -PLS Pattern</li>
                     <li style="font-size: 11px; color: #666; margin-bottom: 5px;">
-                        Pattern: PRONOUN_CONSONANT + -PLS (single stroke for all possessives!)
+                        Pattern: PRONOUN_CONSONANT + -PLS (single stroke for all possessives!)<br/>
+                        Add U (vowel) for plural -j; insert B (making -PBLS) for accusative -n
                     </li>
-                    <li><span class="mapping-key">S-PLS</span> = sia (4 keys)</li>
-                    <li><span class="mapping-key">S*-PLS</span> = ŝia (5 keys)</li>
-                    <li><span class="mapping-key">PH-PLS</span> = mia (5 keys)</li>
-                    <li><span class="mapping-key">W-PLS</span> = via (4 keys)</li>
-                    <li><span class="mapping-key">HR-PLS</span> = lia (5 keys)</li>
-                    <li><span class="mapping-key">TPH-PLS</span> = nia (6 keys)</li>
-                    <li><span class="mapping-key">TKP*-PLS</span> = ĝia (7 keys)</li>
-                    <li><span class="mapping-key">R-PLS</span> = ria (4 keys)</li>
-                    <li><span class="mapping-key">UPLS</span> = ilia (4 keys)</li>
-                    <li><span class="mapping-key">OPLS</span> = onia (4 keys)</li>
+                    <li><span class="mapping-key">S-PLS / S-PBLS / SUPLS / SUPBLS</span> = sia / sian / siaj / siajn</li>
+                    <li><span class="mapping-key">S*-PLS / S*-PBLS / S*UPLS / S*UPBLS</span> = ŝia / ŝian / ŝiaj / ŝiajn</li>
+                    <li><span class="mapping-key">PH-PLS / PH-PBLS / PHUPLS / PHUPBLS</span> = mia / mian / miaj / miajn</li>
+                    <li><span class="mapping-key">W-PLS / W-PBLS / WUPLS / WUPBLS</span> = via / vian / viaj / viajn</li>
+                    <li><span class="mapping-key">HR-PLS / HR-PBLS / HRUPLS / HRUPBLS</span> = lia / lian / liaj / liajn</li>
+                    <li><span class="mapping-key">TPH-PLS / TPH-PBLS / TPHUPLS / TPHUPBLS</span> = nia / nian / niaj / niajn</li>
+                    <li><span class="mapping-key">TKPW*-PLS / TKPW*-PBLS / TKPW*UPLS / TKPW*UPBLS</span> = ĝia / ĝian / ĝiaj / ĝiajn</li>
+                    <li><span class="mapping-key">R-PLS / R-PBLS / RUPLS / RUPBLS</span> = ria / rian / riaj / riajn</li>
+                    <li><span class="mapping-key">K-PLS / K-PBLS / KUPLS / KUPBLS</span> = ilia / ilian / iliaj / iliajn (replaces UPLS)</li>
+                    <li><span class="mapping-key">OPLS / OPBLS / OUPLS / OUPBLS</span> = onia / onian / oniaj / oniajn (OU = brief lookup, not the oj-diphthong here)</li>
                     <li style="font-weight: bold; margin-top: 10px;">Special:</li>
                     <li><span class="mapping-key">TPHOEPLS</span> = unua (first - ordinal, single stroke!)</li>
                     <li style="margin-top: 10px; font-size: 11px; color: #e91e63; font-weight: bold;">
